@@ -4,10 +4,34 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     background-color: rgb(86, 86, 86);
+} */
+
+/* Complementamos con propiedades para tener bien nuestros botones */
+.margin-navbar{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
 }
 
-.margen-kevin{
-    margin-top: 60px;
+/* 2.- Le agregamos un margen a nuestros botones para que no queden espaciados */
+.btn-margin{
+    margin: 20px;
+}
+
+/* 3.- Agregamos propiedades a una clase para nuestro containder del cover */
+.cover-container{
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 4.- Agregamos las propiedades para la imagen */
+.cover-image{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
 }
