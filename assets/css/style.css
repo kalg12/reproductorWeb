@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(86, 86, 86);
+}
+
+.margen-kevin{
+    margin-top: 60px;
+}
