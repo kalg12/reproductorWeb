@@ -12,15 +12,36 @@ class MusicPlayer{
     constructor(songs = [], songsFolder){
         this.songs = [...songs];
         this.songsFolder = songsFolder;
-        this.audioPlayer = new Audio(this.songs[2].link);
+        this.indexSong = 0;
+        this.audioPlayer = new Audio(this.songs[this.indexSong].link);
+    }
+
+    titleSong(){
+        console.log("Hiciste clic en title song")
+        document.getElementById("titleSong").innerHTML = this.songs[this.indexSong].nombreCancion;
+    }
+
+    updateBackgroundColor(){
+        console.log("Hiciste clic en update background color")
+        document.body.style.backgroundColor = this.songs[this.indexSong].color;
     }
 
     nextSong(){
         console.log("Hiciste clic en next song")
+        this.indexSong++;
+        this.audioPlayer.src = this.songs[this.indexSong].link;
+        this.audioPlayer.play();
+        this.titleSong();
+        this.updateBackgroundColor();
     }
 
     prevSong(){
         console.log("Hiciste clic en prev song")
+        this.indexSong--;
+        this.audioPlayer.src = this.songs[this.indexSong].link;
+        this.audioPlayer.play();
+        this.titleSong();
+        this.updateBackgroundColor();
     }
 
     pause(){
@@ -31,6 +52,8 @@ class MusicPlayer{
     play(){
         console.log("Hiciste clic en play song")
         this.audioPlayer.play();
+        this.titleSong();
+        this.updateBackgroundColor();
     }
 
 }

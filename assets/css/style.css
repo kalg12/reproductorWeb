@@ -10,7 +10,7 @@
 
 /* Complementamos con propiedades para tener bien nuestros botones */
 .margin-navbar{
-    margin-top: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
@@ -22,7 +22,7 @@
 
 /* 3.- Agregamos propiedades a una clase para nuestro containder del cover */
 .cover-container{
-    margin-top: 85px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,4 +34,12 @@
     height: auto;
     max-height: 500px;
     object-fit: contain;
+}
+
+/* 5.- Agregamos un título para la canción */
+
+.name-container{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
 }
