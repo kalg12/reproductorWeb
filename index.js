@@ -26,6 +26,11 @@ class MusicPlayer{
         document.body.style.backgroundColor = this.songs[this.indexSong].color;
     }
 
+    updateCover(){
+        console.log("Hiciste clic en update cover")
+        document.getElementById("cover").src = this.songs[this.indexSong].image;
+    }
+
     nextSong(){
         console.log("Hiciste clic en next song")
         this.indexSong++;
@@ -33,6 +38,7 @@ class MusicPlayer{
         this.audioPlayer.play();
         this.titleSong();
         this.updateBackgroundColor();
+        this.updateCover();
     }
 
     prevSong(){
@@ -42,6 +48,7 @@ class MusicPlayer{
         this.audioPlayer.play();
         this.titleSong();
         this.updateBackgroundColor();
+        this.updateCover();
     }
 
     pause(){
@@ -54,6 +61,7 @@ class MusicPlayer{
         this.audioPlayer.play();
         this.titleSong();
         this.updateBackgroundColor();
+        this.updateCover();
     }
 
 }
@@ -72,7 +80,7 @@ const mySongs = [
         'Avicii',
         './assets/audio/Avicii - The Nights.mp3',
         './assets/img/The_Nights.jpeg',
-        'red'
+        '#180E2A'
     ),
 
     new Song(
@@ -80,7 +88,7 @@ const mySongs = [
         'Marshmello ft Bastille',
         './assets/audio/Marshmello ft Bastille - Happier.mp3',
         './assets/img/Happier.jpeg',
-        'yellow'
+        '#DB9F07'
     ),
 
     new Song(
