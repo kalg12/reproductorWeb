@@ -12,22 +12,25 @@ class MusicPlayer{
     constructor(songs = [], songsFolder){
         this.songs = [...songs];
         this.songsFolder = songsFolder;
+        this.audioPlayer = new Audio(this.songs[2].link);
     }
 
     nextSong(){
-
+        console.log("Hiciste clic en next song")
     }
 
     prevSong(){
-
+        console.log("Hiciste clic en prev song")
     }
 
     pause(){
-
+        console.log("Hiciste clic en pause song")
+        this.audioPlayer.pause();
     }
 
     play(){
-
+        console.log("Hiciste clic en play song")
+        this.audioPlayer.play();
     }
 
 }
@@ -74,3 +77,5 @@ const mySongs = [
     )
 
 ]
+
+const myMusicPlayer = new MusicPlayer(mySongs, './assets/audio/');

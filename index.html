@@ -58,13 +58,13 @@
     </div>
 
     <div class="container margin-navbar">
-        <button type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Prev</button>
+        <button id="prevSong" onclick="myMusicPlayer.prevSong()" type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Prev</button>
 
-        <button type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Pause</button>
+        <button id="pauseSong" onclick="myMusicPlayer.pause()" type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Pause</button>
 
-        <button type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Play</button>
+        <button id="playSong" onclick="myMusicPlayer.play()"type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Play</button>
 
-        <button type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Next</button>
+        <button id="nextSong" onclick="myMusicPlayer.nextSong()"type="button" class="btn btn-outline-dark btn-margin" data-mdb-ripple-color="dark">Next</button>
     </div>
 
     <script src="./index.js"></script>
