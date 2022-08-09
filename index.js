@@ -12,22 +12,54 @@ class MusicPlayer{
     constructor(songs = [], songsFolder){
         this.songs = [...songs];
         this.songsFolder = songsFolder;
+        this.indexSong = 0;
+        this.audioPlayer = new Audio(this.songs[this.indexSong].link)
     }
 
     nextSong(){
-
+        console.log("Siguiente canción")
+        this.indexSong++
+        this.audioPlayer.src = this.songs[this.indexSong].link
+        this.audioPlayer.play()
+        this.updateCover()
+        this.titleSong()
+        this.backgroundColor()
     }
 
     prevSong(){
-
+        console.log("Previa canción")
+        this.indexSong--
+        this.audioPlayer.src = this.songs[this.indexSong].link
+        this.audioPlayer.play()
+        this.updateCover()
+        this.titleSong()
+        this.backgroundColor()
     }
 
     pause(){
-
+        console.log("Hiciste pause")
+        this.audioPlayer.pause()
     }
 
     play(){
+        console.log("Hiciste play")
+        this.audioPlayer.play()
+        this.updateCover()
+        this.titleSong()
+        this.backgroundColor()
+    }
 
+    updateCover(){
+        console.log("Hiciste update cover")
+        document.getElementById("cover").src = this.songs[this.indexSong].image
+    }
+
+    titleSong(){
+        document.getElementById("titulo").innerHTML = this.songs[this.indexSong].nombreCancion
+    }
+
+    backgroundColor(){
+        document.body.style.backgroundColor = this.songs[this.indexSong].color
     }
 
 }
@@ -54,7 +86,7 @@ const mySongs = [
         'Marshmello ft Bastille',
         './assets/audio/Marshmello ft Bastille - Happier.mp3',
         './assets/img/Happier.jpeg',
-        'yellow'
+        'rgb(220,156,6)'
     ),
 
     new Song(
@@ -62,7 +94,7 @@ const mySongs = [
         'The Chainsmokers and Coldplay',
         './assets/audio/The Chainsmokers Coldplay - Something Just Like This.mp3',
         './assets/img/SomethingJustLikeThis.jpeg',
-        'blue'
+        '#384855'
     ),
 
     new Song(
@@ -74,3 +106,5 @@ const mySongs = [
     )
 
 ]
+
+const myMusicPlayer = new MusicPlayer(mySongs, "./assets/audio/")
