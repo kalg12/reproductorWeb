@@ -4,10 +4,39 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(86, 86, 86);
-}
-
 .margen-kevin{
     margin-top: 60px;
+}
+
+.container-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.cover{
+    height: 250px;
+    width: 250px;
+}
+
+.container-playlist h3{
+    margin-top: 40px;
+    font-size: 4rem;
+}
+
+.miBtn{
+    border-radius: 50%;
+    height: 80px;
+    width: 100px
+}
+
+.miBtn:hover{
+    color: rgb(177, 208, 24);
+    background-color: rgb(193, 9, 9);
+}
+
+.btn-img{
+    width:80px;
+    height:80px;
 }
